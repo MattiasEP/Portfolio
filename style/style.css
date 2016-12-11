@@ -192,6 +192,16 @@ p {
     padding: 0;
 }
 
+.cv-heading {
+    margin-bottom: 15px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
 .aik {
     float: right;
     width: 35px;
@@ -325,4 +335,46 @@ p {
         font-size: 12px;
     }
 
+}
+
+
+label {
+    /* To make sure that all labels have the same size and are properly aligned */
+    display: inline-block;
+    text-align: left;
+    margin: 5px 0 0 0;
+}
+
+input, textarea {
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+    display: block;
+    font: 1em sans-serif;
+
+    /* To give the same size to all text field */
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* To harmonize the look & feel of text field border */
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+
+input:focus, textarea:focus {
+    /* To give a little highlight on active elements */
+    border-color: #000;
+    outline: none;
+}
+
+textarea {
+    /* To properly align multiline text fields with their labels */
+    vertical-align: top;
+
+    /* To give enough room to type some text */
+    height: 5em;
+
+    /* To allow users to resize any textarea vertically
+       It does not work on all browsers */
+    resize: vertical;
 }
