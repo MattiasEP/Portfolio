@@ -8,3 +8,7 @@
         <img class="aik" src="img/aik.png" target="_blank" />
     </a>
 </footer>
+</div>
+<script src='script/fb.js'></script>
+<script src='script/tweet.js'></script>
+</body>
