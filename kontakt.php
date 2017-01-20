@@ -23,15 +23,15 @@
                 <fieldset>
                     <div>
                         <label for='name'>Namn</label>
-                        <input id='name' type='text' name='name' />
+                        <input id='name' type='text' name='name' value='Namn' />
                     </div>
                     <div>
                         <label for='phone'>Telefonnummer</label>
-                        <input id='phone' type='text' name='phone' />
+                        <input id='phone' type='text' name='phone' value='Telefonnummer' />
                     </div>
                     <div>
                         <label for='mail'>E-mail</label>
-                        <input id='mail' type='text' name='mail' />
+                        <input id='mail' type='text' name='mail' value='E-mail' />
                     </div>
                     <div>
                         <label for='content'>Meddelande</label>

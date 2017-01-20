@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="style/style.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link rel="stylesheet" href="style/font-awesome/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="favicon.ico" />
         <script src="script/jquery-3.1.1.min.js"></script>
     </head>
 <body>
