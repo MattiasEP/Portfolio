@@ -13,6 +13,7 @@ var Hangman = {
         this.$buttons = this.$el.find('#buttons');
         this.$chars = this.$el.find('.charButtons');
         this.$visibleWord = this.$el.find('#visibleWord');
+        this.$pic = this.$el.find('#pic');
     },
 
     bindEvents: function() {
@@ -52,12 +53,48 @@ var Hangman = {
     },
 
     checkChar: function(guessedChar) {
+        var correctLetter = [];
         for (var i = 0; i < this.currentWord.length; i++) {
             if(guessedChar == this.currentWord[i]) {
                 this.visibleWord[i] = guessedChar;
+                correctLetter.push(guessedChar);
             }
         }
+        if (correctLetter.length == 0) {
+            this.lives--;
+        }
         this.reRenderVisibleWord();
+        this.switchPic();
+        this.isDone();
+    },
+
+    switchPic: function() {
+        switch (this.lives) {
+            case 10:    this.$pic.attr('src', './img/hangman.jpg'); break;
+            case 9:     this.$pic.attr('src', './img/test.jpg');    break;
+            case 8:     this.$pic.attr('src', './img/test1.jpg');   break;
+            case 7:     this.$pic.attr('src', './img/test.jpg');    break;
+            case 6:     this.$pic.attr('src', './img/test1.jpg');   break;
+            case 5:     this.$pic.attr('src', './img/test.jpg');    break;
+            case 4:     this.$pic.attr('src', './img/test1.jpg');   break;
+            case 3:     this.$pic.attr('src', './img/test.jpg');    break;
+            case 2:     this.$pic.attr('src', './img/test1.jpg');   break;
+            case 1:     this.$pic.attr('src', './img/test.jpg');    break;
+            case 0:     this.$el.html('DU DOGDE!');                 break;
+            default: break;
+        }
+    },
+
+    isDone: function () {
+        var done = [];
+        for (var i = 0; i < this.visibleWord.length; i++) {
+            if(this.visibleWord[i] == '_') {
+                done.push(i);
+            }
+        }
+        if (done.length == 0) {
+            this.$el.html(`DU VANN! <br> Ordet var ${this.visibleWord}`);
+        }
     },
 
     currentWord: [],
@@ -66,7 +103,10 @@ var Hangman = {
 
     lives: 10,
 
-    words: ['LÅDBIL', 'YXSKAFT', 'LIAN', 'FLAGGSTÅNG', 'BETALTJÄNST', 'WELLPAPP', 'LAGERBLAD', 'ÖLMAGE', 'SPENAT', 'ROQUEFORTOST', 'HÄXBRYGD', 'BANANSKAL', 'DJÄVULSKAP', 'BANDIT'],
+    words: ['LÅDBIL', 'YXSKAFT', 'LIAN', 'FLAGGSTÅNG', 'BETALTJÄNST', 'WELLPAPP',
+            'LAGERBLAD', 'ÖLMAGE', 'SPENAT', 'ROQUEFORTOST', 'HÄXBRYGD', 'BANANSKAL',
+            'DJÄVULSKAP', 'BANDIT', 'PIZZATORSDAG', 'KANELBULLE', 'VÄDEROMSLAG',
+            'VARNINGSTRIANGEL', 'BEKRÄFTELSEBEHOV', 'HÖRNSTEN', 'KONSERVBURK'],
 
     chars: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Å', 'Ä', 'Ö']
 }
