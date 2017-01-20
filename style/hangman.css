@@ -3,7 +3,23 @@ body {
 }
 
 #hangman {
+    width: 100%;
+    text-align: center;
+}
 
+#buttons {
+    margin: 10px auto;
+    width: 750px;
+}
+
+#pic {
+    width: 400px;
+    height: 300px;
+}
+
+#visibleWord {
+    letter-spacing: 10px;
+    font-size: 3em;
 }
 
 .charButtons {
