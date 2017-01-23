@@ -22,6 +22,4 @@
         </div>
     </div>
 <script src="script/jquery.countdown.min.js"></script>
-<script src="script/fb.js"></script>
-<script src="script/tweet.js"></script>
 <script src="script/countdown.js"></script>

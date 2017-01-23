@@ -11,4 +11,5 @@
 </div>
 <script src='script/fb.js'></script>
 <script src='script/tweet.js'></script>
+<script src='script/secret.js'></script>
 </body>

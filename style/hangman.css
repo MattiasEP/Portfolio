@@ -1,24 +1,27 @@
 body {
-    font-family: Arial;
+    font-family: "Montserrat";
 }
 
 #hangman {
-    width: 100%;
     text-align: center;
 }
 
 #buttons {
-    margin: 10px auto;
-    width: 750px;
+    margin: 50px auto auto auto;
+    width: 80%;
 }
 
 #pic {
-    width: 400px;
-    height: 300px;
+    width: 80%;
+    margin-top: 20px;
 }
 
 #visibleWord {
     letter-spacing: 10px;
+    font-size: 3vw;
+}
+
+#end {
     font-size: 3em;
 }
 
@@ -36,6 +39,7 @@ body {
     font-size: 1.8em;
     box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
     cursor: pointer;
+    font-family: "Montserrat";
 }
 
 .charButtons:hover {
@@ -50,4 +54,20 @@ body {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width : 680px) {
+    #buttons {
+        margin: 50px auto auto auto;
+        width: 100%;
+
+    }
+    #visibleWord {
+        letter-spacing: 5px;
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width : 800px) {
+
 }

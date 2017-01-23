@@ -14,6 +14,7 @@ var Hangman = {
         this.$chars = this.$el.find('.charButtons');
         this.$visibleWord = this.$el.find('#visibleWord');
         this.$pic = this.$el.find('#pic');
+        this.$end = this.$el.find('#end');
     },
 
     bindEvents: function() {
@@ -70,17 +71,17 @@ var Hangman = {
 
     switchPic: function() {
         switch (this.lives) {
-            case 10:    this.$pic.attr('src', './img/hangman.jpg'); break;
-            case 9:     this.$pic.attr('src', './img/test.jpg');    break;
-            case 8:     this.$pic.attr('src', './img/test1.jpg');   break;
-            case 7:     this.$pic.attr('src', './img/test.jpg');    break;
-            case 6:     this.$pic.attr('src', './img/test1.jpg');   break;
-            case 5:     this.$pic.attr('src', './img/test.jpg');    break;
-            case 4:     this.$pic.attr('src', './img/test1.jpg');   break;
-            case 3:     this.$pic.attr('src', './img/test.jpg');    break;
-            case 2:     this.$pic.attr('src', './img/test1.jpg');   break;
-            case 1:     this.$pic.attr('src', './img/test.jpg');    break;
-            case 0:     this.$el.html('DU DOGDE!');                 break;
+            case 10:    this.$pic.attr('src', './hangman/img/test1.jpg');   break;
+            case 9:     this.$pic.attr('src', './hangman/img/test.jpg');    break;
+            case 8:     this.$pic.attr('src', './hangman/img/test1.jpg');   break;
+            case 7:     this.$pic.attr('src', './hangman/img/test.jpg');    break;
+            case 6:     this.$pic.attr('src', './hangman/img/test1.jpg');   break;
+            case 5:     this.$pic.attr('src', './hangman/img/test.jpg');    break;
+            case 4:     this.$pic.attr('src', './hangman/img/test1.jpg');   break;
+            case 3:     this.$pic.attr('src', './hangman/img/test.jpg');    break;
+            case 2:     this.$pic.attr('src', './hangman/img/test1.jpg');   break;
+            case 1:     this.$pic.attr('src', './hangman/img/test.jpg');    break;
+            case 0:     this.renderLoseScreen();                    break;
             default: break;
         }
     },
@@ -93,8 +94,19 @@ var Hangman = {
             }
         }
         if (done.length == 0) {
-            this.$el.html(`DU VANN! <br> Ordet var ${this.visibleWord}`);
+            this.renderWinScreen();
+            // this.$el.html(`DU VANN! <br> Ordet var ${this.visibleWord}`);
         }
+    },
+
+    renderWinScreen: function () {
+        this.$buttons.css('display', 'none');
+        this.$end.html('Du vann!');
+    },
+
+    renderLoseScreen: function () {
+        this.$buttons.css('display', 'none');
+        this.$end.html(`Du dog... Ordet var ${this.currentWord.join('')}`);
     },
 
     currentWord: [],
@@ -104,11 +116,19 @@ var Hangman = {
     lives: 10,
 
     words: ['LÅDBIL', 'YXSKAFT', 'LIAN', 'FLAGGSTÅNG', 'BETALTJÄNST', 'WELLPAPP',
-            'LAGERBLAD', 'ÖLMAGE', 'SPENAT', 'ROQUEFORTOST', 'HÄXBRYGD', 'BANANSKAL',
-            'DJÄVULSKAP', 'BANDIT', 'PIZZATORSDAG', 'KANELBULLE', 'VÄDEROMSLAG',
-            'VARNINGSTRIANGEL', 'BEKRÄFTELSEBEHOV', 'HÖRNSTEN', 'KONSERVBURK'],
+            'LAGERBLAD', 'ÖLMAGE', 'SPENAT', 'ROQUEFORT', 'HÄXBRYGD', 'BANANSKAL',
+            'DJÄVULSKAP', 'BANDIT', 'KANELBULLE', 'VÄDEROMSLAG', 'FALUKORV', 'BOB',
+            'HÖRNSTEN', 'KONSERVBURK', 'OPERATION', 'KLISTER', 'KARTA', 'SNUVA',
+            'XYLOFON', 'ZOOLOGI', 'ÅTERFALL', 'TROLL', 'RELIGION', 'KARATE', 'ÖRN',
+            'FICKA', 'FLÄDER', 'AXELVADD', 'ZLATAN', 'HÄVSTÅNG', 'BENBROTT', 'CYKEL',
+            'STJÄRNA', 'VITLÖK', 'PIZZA', 'PIRATSKÄPP', 'FÅGELHOLK', 'TYSKLAND',
+            'PURJOLÖK', 'GULLÖK', 'SILVERLÖK', 'GURKA', 'SPARRIS', 'KO', 'HÖNA',
+            'KVAST', 'LJUSSTAKE', 'LÖNNDÖRR', 'CANASTA', 'LÖKRING', 'MOZZARELLA',
+            'SHOPPING', 'FANTASI', 'FISKEKROK', 'FISKESPÖ', 'TRAKTOR', 'FLYGPLAN'],
 
-    chars: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Å', 'Ä', 'Ö']
+    chars: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
+            'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Å', 'Ä', 'Ö']
+
 }
 
 Hangman.init();

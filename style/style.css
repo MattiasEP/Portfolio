@@ -202,6 +202,16 @@ fieldset {
     margin: 0;
 }
 
+input[type=submit] {
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+#content {
+    margin-bottom: 10px;
+}
+
 .aik {
     float: right;
     width: 35px;
