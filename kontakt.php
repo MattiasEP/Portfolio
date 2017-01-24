@@ -1,3 +1,28 @@
+<?php
+    if( isset($_POST['message']) && isset($_POST['name']) ) {
+
+            $name = $_POST['name'];
+            $message = $_POST['message'];
+            $phone = $_POST['phone'];
+            $mail = $_POST['mail'];
+
+            $query = "INSERT INTO messages (date, name, phone, mail, message) VALUES (NOW(), '$name', '$phone', '$mail', '$message')";
+
+            mysqli_query($db, $query);
+
+            echo "
+                <div class='container'>
+                    <div class='inner-content'>
+                        <div class='content-box'>
+                            Tack! Meddelandet är skickat!
+                        </div>
+                    </div>
+                </div>
+                ";
+        }
+?>
+
+
 <div class="container footfix">
     <div class="inner-content">
         <div class="content-box">
@@ -19,25 +44,25 @@
         <div class="content-box">
             <i class="fa fa-envelope fa-2x fa-icon"></i>
             <h2>Skicka ett meddelande till mig</h2>
-            <form>
+            <form action='' method='POST' class='center'>
                 <fieldset>
                     <div>
                         <label for='name'>Namn</label>
-                        <input id='name' type='text' name='name' value='Namn' />
+                        <input id='name' type='text' name='name' required />
                     </div>
                     <div>
                         <label for='phone'>Telefonnummer</label>
-                        <input id='phone' type='text' name='phone' value='Telefonnummer' />
+                        <input id='phone' type='text' name='phone' required />
                     </div>
                     <div>
                         <label for='mail'>E-mail</label>
-                        <input id='mail' type='text' name='mail' value='E-mail' />
+                        <input id='mail' type='text' name='mail' required />
                     </div>
                     <div>
-                        <label for='content'>Meddelande</label>
-                        <textarea id='content' type='textarea' name='content' value='Meddelande...' /></textarea>
+                        <label for='message'>Meddelande</label>
+                        <textarea id='message type='textarea' name='message' required /></textarea>
                     </div>
-                    <input type='submit' />
+                    <input type='submit' class='margin-top' value='SKICKA' />
                 </fieldset>
             </form>
         </div>

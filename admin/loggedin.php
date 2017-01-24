@@ -2,10 +2,7 @@
     <div class="inner-content">
         <div class="content-box center">
             <div class="login">
-                ADMIN
-                <form method="post" action="?page=logout">
-                    <button type="submit">LOGGA UT</button>
-                </form>
+                <h1>Välkommen in!</h1>
             </div>
         </div>
     </div>

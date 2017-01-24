@@ -23,23 +23,6 @@ h3 {
     margin: auto;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-ul li {
-    display: inline-block;
-    flex-grow: 1;
-    flex-basis: 100%;
-}
-
-.navbar li:nth-child(2) {
-    padding: 0 18px;
-}
-
 .navbar.inner-content {
     margin-bottom: 0;
 }
@@ -86,6 +69,20 @@ footer {
     box-sizing: border-box;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-content: space-between;
+}
+
+ul li {
+    display: inline-block;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
 .li-button {
     position: relative;
     z-index: 100;
@@ -102,6 +99,15 @@ footer {
     align-items: center;
     border-radius: 3px;
     cursor: pointer;
+    margin: 0 10px;
+}
+
+.li-button:first {
+    margin-left: 0 !important;
+}
+
+.li-button:last {
+    margin-right: 0 !important;
 }
 
 .li-button:hover {
@@ -156,9 +162,17 @@ footer {
     float: right;
 }
 
+.delete {
+    margin: auto;
+}
+
 .work-content {
     margin: 10px 0;
     font-style: normal;
+}
+
+.margin-top {
+    margin-top: 20px;
 }
 
 hr {
@@ -206,6 +220,14 @@ input[type=submit] {
     background-color: black;
     color: white;
     border: none;
+}
+
+#date {
+    float: right;
+}
+
+.delete {
+    margin-top: 20px;
 }
 
 #content {
