@@ -31,12 +31,11 @@
         while($row = mysqli_fetch_assoc($result)) {
             echo "
                 <div class='word'>
-                    {$row['word']}
-                    <i class='fa fa-times delete-word' aria-hidden='true'></i>
-                    <form action='' method='POST'>
+                    <form action='' method='POST' class='delete-form'>
                         <input type='hidden' value='{$row[id]}' name='id' />
-                        <button type='submit' value='X'></button>
+                        <button type='submit' class='delete-btn'><i class='fa fa-close delete-word' aria-hidden='true'></i></button>
                     </form>
+                    {$row['word']}
                 </div>
                 ";
         }

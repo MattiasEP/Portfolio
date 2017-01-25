@@ -229,7 +229,7 @@ input[type=submit] {
 #words {
     align-content: center;
     text-align: justify;
-    
+
 }
 
 .word {
@@ -237,14 +237,28 @@ input[type=submit] {
     background-color: black;
     color: white;
     border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
+    padding: 8px 0 8px 8px;
+    margin: 5px 0 5px 5px;
     align-content: center;
     text-align: center;
 }
 
+.delete-word {
+    vertical-align: middle;
+}
+
 .delete-word:hover {
     color: red;
+}
+
+.delete-form {
+    float: right;
+}
+
+.delete-btn {
+    border: none;
+    background-color: transparent;
+    color: white;
 }
 
 #date {
