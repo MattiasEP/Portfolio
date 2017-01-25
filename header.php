@@ -11,6 +11,7 @@ if(is_admin()) {
                     <li><a href="?page=cvadmin"><div class="li-button">CV</div></a></li>
                     <li><a href="?page=msg"><div class="li-button">MEDDELANDEN</div></a></li>
                     <li><a href="?page=text"><div class="li-button">TEXT</div></a></li>
+                    <li><a href="?page=hangman"><div class="li-button">HANGMAN</div></a></li>
                     <li><a href="?page=logout"><div class="li-button">LOGGA UT</div></a></li>
                 </ul>
             </nav>

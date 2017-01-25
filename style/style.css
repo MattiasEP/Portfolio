@@ -175,6 +175,10 @@ ul li {
     margin-top: 20px;
 }
 
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
 hr {
     margin-top: 5px;
 }
@@ -220,6 +224,27 @@ input[type=submit] {
     background-color: black;
     color: white;
     border: none;
+}
+
+#words {
+    align-content: center;
+    text-align: justify;
+    
+}
+
+.word {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    align-content: center;
+    text-align: center;
+}
+
+.delete-word:hover {
+    color: red;
 }
 
 #date {

@@ -20,6 +20,7 @@
             case 'msg':         include('./admin/msg.php');     break;
             case 'text':        include('./admin/text.php');    break;
             case 'cvadmin':     include('./admin/cvadmin.php'); break;
+            case 'hangman':     include('./admin/hangman.php'); break;
 
             // DEFAULT
             default:            include('start.php');           break;

@@ -1,11 +1,14 @@
 var Hangman = {
 
     init: function() {
-        this.cacheDom();
-        this.bindEvents();
-        this.renderButtons();
-        this.renderVisibleWord();
-        // this.randomWord();
+        var self = this;
+
+        self.cacheDom();
+        self.bindEvents();
+        self.getWord(function() {
+            self.renderButtons();
+            self.renderVisibleWord();
+        });
     },
 
     cacheDom: function() {
@@ -15,6 +18,7 @@ var Hangman = {
         this.$visibleWord = this.$el.find('#visibleWord');
         this.$pic = this.$el.find('#pic');
         this.$end = this.$el.find('#end');
+        this.$words = this.$el.find('#words');
     },
 
     bindEvents: function() {
@@ -107,6 +111,19 @@ var Hangman = {
     renderLoseScreen: function () {
         this.$buttons.css('display', 'none');
         this.$end.html(`Du dog... Ordet var ${this.currentWord.join('')}`);
+    },
+
+    getWord: function (cb) {
+        var self = this;
+
+        $.ajax({
+            url: '../admin/getword.php',
+            success: function(data) {
+                self.words = data.split('\n');
+            }
+        }).done(function() {
+            cb.call();
+        });
     },
 
     currentWord: [],
