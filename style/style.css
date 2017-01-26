@@ -6,6 +6,11 @@ body {
     font-size: 15px;
 }
 
+iframe {
+    display: block;
+    margin: auto;
+}
+
 .page-container {
     position: relative;
     min-height: 100vh;
@@ -237,18 +242,21 @@ input[type=submit] {
     background-color: black;
     color: white;
     border-radius: 5px;
-    padding: 8px 0 8px 8px;
-    margin: 5px 0 5px 5px;
+    padding: 8px;
+    margin: 5px;
     align-content: center;
     text-align: center;
+    position: relative;
 }
 
 .delete-word {
-    vertical-align: middle;
+    position: absolute;
+    bottom: 12px;
 }
 
 .delete-word:hover {
     color: red;
+    cursor: pointer;
 }
 
 .delete-form {

@@ -12,3 +12,8 @@ function is_admin() {
         return false;
     }
 }
+
+function cleaner($dirty) {
+    global $db;
+    return mysqli_real_escape_string($db, $dirty);
+}

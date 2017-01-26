@@ -2,6 +2,7 @@
     include('config.php');
     include('head.php');
     include('header.php');
+
     if (isset($_GET['page'])) {
         switch($_GET['page']) {
 

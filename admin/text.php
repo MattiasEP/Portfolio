@@ -2,9 +2,9 @@
     if(is_admin()) {
 
         if( isset($_POST['heading']) && isset($_POST['content']) && isset($_POST['id']) ) {
-            $heading = $_POST['heading'];
-            $content = $_POST['content'];
-            $id      = $_POST['id'];
+            $heading = cleaner($_POST['heading']);
+            $content = cleaner($_POST['content']);
+            $id      = cleaner($_POST['id']);
 
             $query = "UPDATE texts SET heading = '$heading', content = '$content' WHERE id = '$id'";
             mysqli_query($db, $query);

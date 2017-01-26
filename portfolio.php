@@ -1,7 +1,7 @@
 <div class="container footfix">
     <div class="inner-content">
         <div class="content-box">
-            <h2>Saker jag byggt</h2>
+            <h2>Saker jag skapat</h2>
         </div>
     </div>
 </div>

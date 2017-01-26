@@ -19,7 +19,7 @@
     echo "
             </div>
         </div>
-        <div class='container footfix'>
+        <div class='container'>
             <div class='inner-content'>
                 <div class='content-box counters'>
                     <div class='countdown-box'>
@@ -31,6 +31,13 @@
                         <h2>Tid kvar till examen:</h2>
                         <span id='countdown-exam'></span>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class='container footfix'>
+            <div class='inner-content'>
+                <div class='content-box'>
+                <iframe width='560' height='315' src='https://www.youtube.com/embed/XB2ejEpAoPA' frameborder='0' allowfullscreen></iframe>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
     if(is_admin()) {
 
         if(isset($_POST['id'])) {
-            $id = $_POST['id'];
+            $id = cleaner($_POST['id']);
 
             $query = "DELETE FROM messages WHERE id = $id";
 

@@ -1,10 +1,10 @@
 <?php
     if( isset($_POST['message']) && isset($_POST['name']) ) {
 
-            $name = $_POST['name'];
-            $message = $_POST['message'];
-            $phone = $_POST['phone'];
-            $mail = $_POST['mail'];
+            $name    = cleaner($_POST['name']);
+            $message = cleaner($_POST['message']);
+            $phone   = cleaner($_POST['phone']);
+            $mail    = cleaner($_POST['mail']);
 
             $query = "INSERT INTO messages (date, name, phone, mail, message) VALUES (NOW(), '$name', '$phone', '$mail', '$message')";
 

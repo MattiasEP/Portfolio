@@ -2,7 +2,7 @@
     if(is_admin()) {
 
         if( isset($_POST['word']) ) {
-            $word = mb_strtoupper($_POST['word']);
+            $word = cleaner( mb_strtoupper($_POST['word']) );
             $query = "INSERT INTO words (word) VALUES ('$word')";
             mysqli_query($db, $query);
         }

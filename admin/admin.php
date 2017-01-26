@@ -2,7 +2,11 @@
 session_start();
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
-    if($_POST['username'] == "mattias" && $_POST['password'] == "saittam") {
+
+    $usr = cleaner($_POST['username']);
+    $psw = cleaner($_POST['password']);
+
+    if($usr == "mattias" && $psw == "saittam") {
         $_SESSION['admin'] = TRUE;
         header('Location: ?page=admin');
     }
