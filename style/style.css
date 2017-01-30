@@ -6,6 +6,10 @@ body {
     font-size: 15px;
 }
 
+header {
+    position: relative;
+}
+
 iframe {
     display: block;
     margin: auto;
@@ -149,6 +153,7 @@ ul li {
 }
 
 .content-box-1 {
+    display: none;
     background-color: #fff;
     padding: 5px 20px;
     border-radius: 3px;
@@ -216,7 +221,12 @@ p {
 }
 
 .cv-heading {
+    display: none;
     margin-bottom: 15px;
+}
+
+#cv {
+    /*min-height: 637px;*/
 }
 
 fieldset {
@@ -301,6 +311,21 @@ input[type=submit] {
     transform: translate(-50%, -50%)
 }
 
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .links {
     float: left;
 }
@@ -313,6 +338,48 @@ input[type=submit] {
 .fb-share-button {
     margin-bottom: 5px;
     display: inline-block;
+}
+
+.magic {
+    position: absolute;
+    z-index: 1000;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+}
+
+.relative {
+    position: relative;
+}
+
+.fa-phone {
+    animation: wiggle 2s linear infinite;
+    position: absolute;
+    margin-right: 20px;
+    right: 0;
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
 }
 
 /*----- RESPONSIVITET -----*/

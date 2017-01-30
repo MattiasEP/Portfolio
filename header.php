@@ -24,6 +24,7 @@ else {
             <h1 class="center">
                 <span class="h1">Mattias Söderström</span>
                 <a href="index.php"><img class="logga" src="img/nya.png"/></a>
+                <div class="magic"><span class="glow">[ctrl + 1]</span></div>
             </h1>
             <nav class="navbar inner-content">
                 <ul>

@@ -8,6 +8,7 @@
                 <meta name='description' content='Mattias Söderström - Portfolio'>
                 <title>Mattias Söderström</title>
                 <link rel='stylesheet' href='style/style.css'>
+                <link rel='stylesheet' href='style/glow.css'>
                 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         ";
 
@@ -21,7 +22,7 @@
                 <script src='script/jquery-3.1.1.min.js'></script>
             </head>
         ";
-            
+
         if(is_admin()) {
             echo "<body style='background-color: darkred;'>";
         }

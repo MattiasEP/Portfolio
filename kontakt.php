@@ -25,13 +25,13 @@
 
 <div class="container footfix">
     <div class="inner-content">
-        <div class="content-box">
+        <div class="content-box relative">
             <i class="fa fa-phone fa-2x fa-icon"></i>
             <h2>Ring mig</h2>
             <p class="contact-p"><a href="tel:+46707663598">+46 70-766 35 98</a></p>
         </div>
         <div class="content-box">
-            <i class="fa fa-envelope fa-2x fa-icon"></i>
+            <i class="fa fa-envelope fa-2x fa-icon open"></i>
             <h2>Maila mig</h2>
             <p class="contact-p"><a href="mailto:mattias.ep@gmail.com">mattias.ep@gmail.com</a></p>
         </div>
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="content-box">
-            <i class="fa fa-envelope fa-2x fa-icon"></i>
+            <i class="fa fa-envelope fa-2x fa-icon open"></i>
             <h2>Skicka ett meddelande till mig</h2>
             <form action='' method='POST' class='center'>
                 <fieldset>

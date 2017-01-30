@@ -1,0 +1,23 @@
+.glow {
+    text-align: center;
+    background: -webkit-linear-gradient(left, transparent 45%, #FFF 50%, transparent 55%);
+    background: linear-gradient(to right, transparent 45%, #FFF 50%, transparent 55%);
+    background-size: 200% auto;
+    color: #233342;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: shine 3s linear infinite;
+          animation: shine 3s linear infinite;
+}
+@-webkit-keyframes shine {
+    to {
+        background-position: -200% center;
+    }
+}
+@keyframes shine {
+    to {
+        background-position: -200% center;
+    }
+}

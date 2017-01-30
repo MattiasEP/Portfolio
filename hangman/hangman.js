@@ -75,17 +75,18 @@ var Hangman = {
 
     switchPic: function() {
         switch (this.lives) {
-            case 10:    this.$pic.attr('src', './hangman/img/test1.jpg');   break;
-            case 9:     this.$pic.attr('src', './hangman/img/test.jpg');    break;
-            case 8:     this.$pic.attr('src', './hangman/img/test1.jpg');   break;
-            case 7:     this.$pic.attr('src', './hangman/img/test.jpg');    break;
-            case 6:     this.$pic.attr('src', './hangman/img/test1.jpg');   break;
-            case 5:     this.$pic.attr('src', './hangman/img/test.jpg');    break;
-            case 4:     this.$pic.attr('src', './hangman/img/test1.jpg');   break;
-            case 3:     this.$pic.attr('src', './hangman/img/test.jpg');    break;
-            case 2:     this.$pic.attr('src', './hangman/img/test1.jpg');   break;
-            case 1:     this.$pic.attr('src', './hangman/img/test.jpg');    break;
-            case 0:     this.renderLoseScreen();                    break;
+            case 10:    this.$pic.attr('src', './hangman/img/1.jpg');   break;
+            case 9:     this.$pic.attr('src', './hangman/img/2.jpg');   break;
+            case 8:     this.$pic.attr('src', './hangman/img/3.jpg');   break;
+            case 7:     this.$pic.attr('src', './hangman/img/4.jpg');   break;
+            case 6:     this.$pic.attr('src', './hangman/img/5.jpg');   break;
+            case 5:     this.$pic.attr('src', './hangman/img/6.jpg');   break;
+            case 4:     this.$pic.attr('src', './hangman/img/7.jpg');   break;
+            case 3:     this.$pic.attr('src', './hangman/img/8.jpg');   break;
+            case 2:     this.$pic.attr('src', './hangman/img/9.jpg');   break;
+            case 1:     this.$pic.attr('src', './hangman/img/10.jpg');  break;
+            case 0:     this.$pic.attr('src', './hangman/img/11.jpg');
+                        this.renderLoseScreen();                        break;
             default: break;
         }
     },
@@ -132,16 +133,7 @@ var Hangman = {
 
     lives: 10,
 
-    words: ['LÅDBIL', 'YXSKAFT', 'LIAN', 'FLAGGSTÅNG', 'BETALTJÄNST', 'WELLPAPP',
-            'LAGERBLAD', 'ÖLMAGE', 'SPENAT', 'ROQUEFORT', 'HÄXBRYGD', 'BANANSKAL',
-            'DJÄVULSKAP', 'BANDIT', 'KANELBULLE', 'VÄDEROMSLAG', 'FALUKORV', 'BOB',
-            'HÖRNSTEN', 'KONSERVBURK', 'OPERATION', 'KLISTER', 'KARTA', 'SNUVA',
-            'XYLOFON', 'ZOOLOGI', 'ÅTERFALL', 'TROLL', 'RELIGION', 'KARATE', 'ÖRN',
-            'FICKA', 'FLÄDER', 'AXELVADD', 'ZLATAN', 'HÄVSTÅNG', 'BENBROTT', 'CYKEL',
-            'STJÄRNA', 'VITLÖK', 'PIZZA', 'PIRATSKÄPP', 'FÅGELHOLK', 'TYSKLAND',
-            'PURJOLÖK', 'GULLÖK', 'SILVERLÖK', 'GURKA', 'SPARRIS', 'KO', 'HÖNA',
-            'KVAST', 'LJUSSTAKE', 'LÖNNDÖRR', 'CANASTA', 'LÖKRING', 'MOZZARELLA',
-            'SHOPPING', 'FANTASI', 'FISKEKROK', 'FISKESPÖ', 'TRAKTOR', 'FLYGPLAN'],
+    words: [],
 
     chars: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
             'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Å', 'Ä', 'Ö']

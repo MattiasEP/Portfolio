@@ -37,7 +37,9 @@
         <div class='container footfix'>
             <div class='inner-content'>
                 <div class='content-box'>
-                <iframe width='560' height='315' src='https://www.youtube.com/embed/XB2ejEpAoPA' frameborder='0' allowfullscreen></iframe>
+                <div class='video-container'>
+                    <iframe class='video' src='https://www.youtube.com/embed/XB2ejEpAoPA' frameborder='0' allowfullscreen></iframe>
+                </div>
                 </div>
             </div>
         </div>
